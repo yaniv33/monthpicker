@@ -1,0 +1,32 @@
+<!--<mat-form-field>-->
+  <!--<mat-label>Month and Year</mat-label>-->
+  <!--<input matInput [matDatepicker]="dp" >-->
+  <!--<mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>-->
+  <!--<mat-datepicker #dp-->
+                  <!--startView="multi-year"-->
+                  <!--(yearSelected)="chosenYearHandler($event)"-->
+                  <!--(monthSelected)="chosenMonthHandler($event, dp)"-->
+                  <!--panelClass="example-month-picker">-->
+  <!--</mat-datepicker>-->
+<!--</mat-form-field>-->
+
+
+<H1>now is {{datetime}}</H1>
+
+<mat-form-field>
+  <mat-label>Month and Year</mat-label>
+  <input matInput [matDatepicker]="dp" [formControl]="date">
+  <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+  <mat-datepicker #dp
+                  startView="multi-year"
+                  (yearSelected)="chosenYearHandler($event)"
+                  (monthSelected)="chosenMonthHandler($event, dp)"
+                  panelClass="example-month-picker">
+  </mat-datepicker>
+</mat-form-field>
+
+
+
+<owl-date-time-inline  #dt10></owl-date-time-inline>
+
+<!--<app-date-time-picker></app-date-time-picker>-->
